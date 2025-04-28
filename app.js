@@ -26,10 +26,7 @@ function readFileContent() {
  */
 function getWordCounts(content) {
     const wordCount = {};
-    const words = content
-        .toLowerCase()
-        .split(/\W+/)
-        .filter(Boolean);
+    const words = content.toLowerCase().split(/\W+/).filter(Boolean);
 
     for (const word of words) {
         wordCount[word] = (wordCount[word] || 0) + 1;
